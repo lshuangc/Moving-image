@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var timer = null;
+    //让盒子往下移动
+    var y = 0;
+    //找人
+    var box = document.getElementById("box");
+    timer = setInterval(function () {
+        y++;
+        if (y < 300) {
+            box.style.top = y + "px";
+        } else {
+            clearInterval(timer);
+        }
+
+    }, 15);
+</script>
+</body>
+</html>
